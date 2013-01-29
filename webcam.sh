@@ -29,8 +29,6 @@ fi
 PIC_FILE="$DEST_DIR/`date +'%Y%m%d%H%M%S'`_webcam.jpg"
 TMP_FILE="$DEST_DIR/tmp.jpg"
 TMP_FILE2="$DEST_DIR/tmp2.jpg"
-TMP_FILE3="$DEST_DIR/tmp3.jpg"
-
 
 #### NOTE TO gstreamer:
 ## if i try to get a picture from my cheap webcams, the first pictures are very dark, the webcams seems to need a second
@@ -50,6 +48,6 @@ convert -pointsize 32 -font /usr/share/fonts/truetype/ubuntu-font-family/UbuntuM
 ## put identifier string from used webcam device after the timestamp
 convert -pointsize 32 -font /usr/share/fonts/truetype/ubuntu-font-family/UbuntuMono-R.ttf -fill white -stroke black -strokewidth 1 -draw "text 300,20 \"$(udevadm info -a -p $(udevadm info -q path -n ${CAM}) | grep ATTR{name} | awk 'BEGIN { FS="\"" } { print $2 }')\"" $TMP_FILE2 $PIC_FILE >> $LOGFILE
 
+##cleanup temp files
 rm $TMP_FILE
 rm $TMP_FILE2
-rm $TMP_FILE3
