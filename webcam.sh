@@ -26,7 +26,7 @@ fi
 ## fi
 
 ## PIC_FILE="$DAY_DIR/webcam-`date +'%Y%m%d%H%M%S'`.jpg"
-PIC_FILE="$DEST_DIR/`date +'%Y%m%d%H%M%S'`_webcam_gstlaunch.jpg"
+PIC_FILE="$DEST_DIR/`date +'%Y%m%d%H%M%S'`_webcam.jpg"
 TMP_FILE="$DEST_DIR/tmp.jpg"
 TMP_FILE2="$DEST_DIR/tmp2.jpg"
 TMP_FILE3="$DEST_DIR/tmp3.jpg"
