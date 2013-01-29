@@ -43,10 +43,6 @@ TMP_FILE3="$DEST_DIR/tmp3.jpg"
 ## gst-launch v4l2src num-buffers=1 \! jpegenc \! filesink location=$PIC_FILE ## pics too dark
 ## gst-launch v4l2src device=$CAM num-buffers=1 \! ffmpegcolorspace  \! videobalance brightness=0.3 \! jpegenc \! filesink location=$TMP_FILE 
 ##gst-launch v4l2src device=$CAM num-buffers=1 \! ffmpegcolorspace \! jpegenc \! filesink location=$TMP_FILE > $LOGFILE
-fswebcam -d $CAM -S 12 -r 1920x1080 --no-banner --jpeg 100 $TMP_FILE > $LOGFILE
-fswebcam -d $CAM -S 15 -r 1920x1080 --no-banner --jpeg 100 $TMP_FILE > $LOGFILE
-fswebcam -d $CAM -S 20 -r 1920x1080 --no-banner --jpeg 100 $TMP_FILE > $LOGFILE
-fswebcam -d $CAM -S 25 -r 1920x1080 --no-banner --jpeg 100 $TMP_FILE > $LOGFILE
 fswebcam -d $CAM -S 30 -r 1920x1080 --no-banner --jpeg 100 $TMP_FILE > $LOGFILE
 
 ## put date and time into picture on upper left corner
