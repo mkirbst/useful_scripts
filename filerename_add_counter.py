@@ -1,4 +1,20 @@
 #!/usr/bin/python
+"""
+This script add a trailing counter in the filename for every file in the called folder. Trailing zeros are also appended
+
+before:
+$ ls -hal
+file01.txt
+file02.txt
+file03.txt
+
+after:
+$ ls -hal
+1_file01.txt
+2_file02.txt
+3_file03.txt
+"""
+
 import os, os.path
 
 class bcolors:
