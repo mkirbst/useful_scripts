@@ -12,7 +12,7 @@ else
 fi
 
 # du -bcs       # -b show filesize in byte not kilobyte # -c total # -s summarize
-# sort -nr      # -n sort nummerical, -r sort reverse higo values on top low values on bottom 
+# sort -nr      # -n sort nummerical, -r sort reverse high values on top to low values on bottom 
 # awk 'NR > 1'  # remove the first line in output, here is the first line the summary line from sort -nr
 
 find $WD -mindepth 1 -maxdepth 1 -type d -print0 | xargs -0 du -bcs | sort -nr | awk 'NR > 1' |
