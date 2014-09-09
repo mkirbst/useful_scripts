@@ -16,7 +16,7 @@ fi
 # awk 'NR > 1'  # remove the first line in output, here is the first line the summary line from sort -nr
 
 find $WD -mindepth 1 -maxdepth 1 -type d -print0 | xargs -0 du -bcs | sort -nr | awk 'NR > 1' |
-awk 'BEGIN {} {
+awk '{
         if (    $1 > 1024^3 ) { printf "%5.1f GB  %s\n", $1/1024^3, $2} 
         else if ( $1 > 1024^2 ) { printf "%5.1f MB  %s\n", $1/1024^2, $2}
         else if ( $1 > 1024^1 ) { printf "%5.1f KB  %s\n", $1/1024^1, $2}
