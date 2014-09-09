@@ -2,6 +2,13 @@
 
 # This script shows all subdirectories in the actual directory,
 # sorted by their size
+# example output looks like:
+#
+#   1.1 GB  /home/m/.thunderbird
+#   1.1 GB  /home/m/sdn
+# 881.8 MB  /home/m/.cache
+# 806.8 MB  /home/m/apps
+
 
 if [ $# -eq 0 ]
 then 
