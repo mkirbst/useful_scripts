@@ -2,8 +2,9 @@
 #
 # This script simulates mouseclick n-times with a delay from m seconds
 # useful eg for tinder :P
+# Needs xdotool to generate the mouseclicks, can easily installed, eg if you use ubuntu:
 #
-# sudo apt-get install xdotool
+# $ sudo apt-get install xdotool
 
 
 function usage {
