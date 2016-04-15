@@ -1,17 +1,17 @@
 #!/bin/bash
 #
-# Script to loop recordone of my favorite web radio stations
+# Script to loop record one of my favorite web radio stations.
 # 
-# uses vlc console wrapper. To install, do:
+# Uses vlc console wrapper and screen terminal multiplexer. To install depencies, do:
 #
-# sudo apt-get install vlc-nox
+# sudo apt-get install screen vlc-nox
 #
-# call the script every hour per cronjob, it will start new wav file. You can grab favorite songs from the wav files
+# call the script every hour per cronjob, it will start new wav file. You can grab favorite songs from the wav files.
 # Files older than 24h should be overwritten because of the file name. To be shure add following cronjob that removes
-# any wav files, older than 24h (remove trailing #):
+# any wav files, older than 24h in the download folder (remove trailing #):
 # 0 * * * *       /usr/bin/nice -n 19 /usr/bin/find /home/m/housetime_looprecord/ -iname "*.wav" -type f -mmin +1440 -delete
 #
-# I use fanless Igel U700C thin client with 40GB laptop harddisk + Audigy 2 ZS PCI for this purpose.
+# I use fanless Igel U700C thin client with 40GB ide laptop harddisk + Audigy 2 ZS PCI for this purpose.
 
 
 RETRIES=5
